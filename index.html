@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  <section class="calc-container">
+    
+    <div class="header-container">
+      <h2>calc</h2>
+      <div class="toggle-container">
+        <p class="toggle-title">THEME</p>
+          <div class="theme-toggle">
+              <p class="toggle-counter">1 2 3</p>
+              <br>
+              <div class="toggle-bg">
+                <label class="custom-radio-button">
+                  <input id="first" name="toggle-state" type="radio" checked />
+                  <span class="checkmark"></span>
+                </label>
+                  
+                <label class="custom-radio-button">
+                  <input id="second" name="toggle-state" type="radio" />
+                  <span class="checkmark"></span>
+                </label>
+                 
+                <label class="custom-radio-button">
+                  <input id="third" name="toggle-state" type="radio" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+     
+         </div>
+      </div>
+       
+       
+    </div>
+    <div class="display-container">
+      <div class="screen-op">
+        <p class="display-text" id="number1" data-previous-operand></p>
+
+      </div>
+      <h1 class="display-content" id="display" data-current-operand>0</h1>
+      
+    </div>
+    <div class="btn-container">
+       <button class="btns" data-number>7</button>
+       <button class="btns" data-number>8</button>
+        <button class="btns" data-number>9</button>
+        <button class="btns" id="btn-del" data-delete>DEL</button>
+        <button class="btns" data-number>4</button>
+        <button class="btns" data-number>5</button>
+        <button class="btns"  data-number>6</button>
+        <button class="btns" data-operator="+">+</button>
+        <button class="btns" data-number>1</button>
+        <button class="btns" data-number>2</button>
+        <button class="btns"  data-number>3</button>
+        <button class="btns" data-operator="-">-</button>
+        <button class="btns" data-number=".">.</button>
+        <button class="btns" data-number>0</button>
+        <button class="btns" data-operator="÷">/</button>
+        <button class="btns" data-operator="*">x</button>
+        <button class="btns" id="btn-reset" data-reset>RESET</button>
+        <button class="btns" id="btn-equal"  data-equal="=">=</button>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">EDDIE ELORZA </a>.
+    </div>
+  </section>
+
+  <script src="./js/themes.js"></script>
+  <script src="./js/app.js"></script>
+
+
+</body>
+</html>

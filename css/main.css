@@ -1,0 +1,274 @@
+/* GLOBAL SETTINGS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'League Spartan', sans-serif;
+}
+
+/* GENERAL PORPOSE */
+body {
+    font-size: 32px;
+    background-color: var(--bg-main);
+
+}
+
+.normal {
+    --bg-main: hsl(222, 26%, 31%);
+    --bg-toggle-keypad: hsl(223, 31%, 20%);
+    --bg-screen: hsl(224, 36%, 15%);
+    --bg-key-second: hsl(225, 21%, 49%);
+    --bg-key-shadow-second: hsl(224, 28%, 35%);
+    --bg-key-toggle: hsl(6, 63%, 50%);
+    --Dark-red: hsl(6, 70%, 34%);
+    --bg-key: hsl(30, 25%, 89%);
+    --bg-key-shadow: hsl(28, 16%, 65%);
+   --White: hsl(0, 0%, 90%);
+    --bg-text-btn: hsl(0, 0%, 90%);
+    --bg-text: hsl(221, 14%, 31%);
+    --bg-equal: hsl(0, 0%, 90%);
+}
+
+.light{
+    --bg-main:  hsl(0, 0%, 90%);
+    --bg-toggle-keypad: hsl(0, 5%, 81%);
+    --bg-screen: hsl(0, 0%, 93%);
+    --bg-key-second: hsl(185, 42%, 37%);
+    --bg-key-shadow-second: hsl(185, 58%, 25%);
+    --bg-key-toggle: hsl(25, 98%, 40%);
+    --Dark-red: hsl(25, 99%, 27%);
+    --bg-key: hsl(45, 7%, 89%);
+    --bg-key-shadow: hsl(35, 11%, 61%);
+    --White: hsl(60, 10%, 19%);
+    --bg-text-btn: hsl(0, 0%, 90%);
+    --bg-text: hsl(60, 10%, 19%);
+    --bg-equal: hsl(0, 0%, 90%);
+    
+}
+
+.neon{
+
+    --bg-main:  hsl(268, 75%, 9%);
+    --bg-toggle-keypad: hsl(268, 71%, 12%);
+    --bg-screen: hsl(268, 71%, 12%);
+    --bg-key-second: hsl(281, 89%, 26%);
+    --bg-key-shadow-second: hsl(285, 91%, 52%);
+    --bg-key-toggle: hsl(176, 100%, 44%);
+    --Dark-red: hsl(177, 92%, 70%);
+    --bg-key: hsl(268, 47%, 21%);
+    --bg-key-shadow: hsl(290, 70%, 36%);
+    --White: hsl(52, 100%, 62%);
+    --bg-text-btn: hsl(0, 0%, 90%);
+    --bg-text: hsl(52, 100%, 62%);
+    --bg-equal: hsl(0, 0, 100%);
+}
+
+.calc-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    color: var(--White);
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+}
+.toggle-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    justify-content: space-evenly;
+    font-size: .8rem;
+    margin-right: -15px;
+   
+}
+.toggle-title{
+    margin-top: 15px;
+}
+.theme-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px;
+    
+ }
+ .toggle-counter{
+    text-align: center;
+    letter-spacing:7px;
+    margin-right: -6px;
+
+ }
+
+ .toggle-bg{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-toggle-keypad);
+    width: 70px;
+    height: 25px;
+    border-radius: 20px;
+    
+ }
+ .custom-radio-button input {
+    display: none;
+ }
+ .custom-radio-button .checkmark {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: var(--bg-key-toggle);
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+ }
+ .custom-radio-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+ }
+ .custom-radio-button input:checked + .checkmark {
+    opacity: 1;
+    display: inline-block;
+ }
+.display-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    place-items: end;
+    color: var(--White);
+    width: 80vw;
+    height:12vh;
+    background-color: var(--bg-screen);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    margin-bottom: 0px;    
+}
+.screen-op{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    opacity: 0.5;
+    margin-bottom: 10px;
+    letter-spacing: 15px;
+
+}
+
+.btn-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    width: 80vw;
+    height: 55%;
+
+    background-color: var(--bg-toggle-keypad);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-text);
+    font-size: 2.5rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bg-key);
+    box-shadow: 0rem .4rem var(--bg-key-shadow);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'League Spartan', sans-serif;
+
+    transition: all 0.3s ease-in-out;
+}
+/* .btns:nth-child(){
+    box-shadow: .5rem 0.5rem white, -0.5rem -0.5rem white;
+} */
+#btn-del{
+    font-size: 1.5rem;
+    color: var(--bg-text-btn);
+    background-color: var(--bg-key-second);
+    box-shadow: 0rem .4rem var(--bg-key-shadow-second);
+}
+#btn-reset{
+    font-size: 1.5rem;
+    grid-column: 1/3;
+    color: var(--bg-text-btn);
+    background-color: var(--bg-key-second);
+    box-shadow: 0rem .4rem var(--bg-key-shadow-second);
+}
+#btn-equal{
+    color: var(--bg-equal);
+    grid-column: 3/5;
+    background-color: var(--bg-key-toggle);
+    box-shadow: 0rem .4rem var(--Dark-red);
+}
+
+.btns:hover, #btn-reset:hover, #btn-del:hover, #btn-equal:hover{
+    filter: brightness(1.5);
+    box-shadow: 0rem 0rem var(--bg-toggle-keypad);
+}
+
+.attribution{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--White);
+    font-size: .7rem;
+    margin-top: 20px;
+}
+.attribution a{
+    color: var(--bg-key-toggle);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+@media screen and (min-width: 768px){
+  
+    .header-container{
+        width: 550px;    }
+    .display-container{
+        width: 550px;
+        height: 15vh;
+        font-size: 3rem;
+    }
+    .btn-container{
+        width: 550px;
+        height: 60%;
+        gap: 30px;
+        padding: 40px;
+    }
+    .btns{
+        width: 100%;
+        height: 100%;
+        font-size: 3rem;
+    }
+}
+    
